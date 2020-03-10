@@ -25,7 +25,19 @@ export default function AddUser(props){
                 className="campo-usuario"
                 onChange={ props.funcionObtenerPersona } 
                 id="outlined-basic" 
-                label="Agregar Usuario" 
+                label="Agregar Usuario"
+                value={props.nombre} 
+                error={props.validacion}
+                helperText={props.mensajeError}
+                variant="outlined" />
+            <TextField 
+                className="campo-usuario"
+                onChange={ props.funcionObtenerEmail } 
+                id="outlined-basic" 
+                label="Email"
+                value={props.email}
+                error={props.validacion}
+                helperText={props.mensajeError}
                 variant="outlined" />
             <Button
                 variant="contained"
